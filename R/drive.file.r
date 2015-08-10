@@ -21,7 +21,7 @@ drive.file <- function(title,download.type="txt") {
     if(download.type == "html") {
         file.data <- content(response, as="text")
     } else if(download.type == "xlsx") {
-        warning("The content return is binary xlsx, write it in a file with writeBin() function")
+        message("The content return is binary xlsx, write it in a file with writeBin() function")
         file.data <- content(response, as="raw")
     } else {
         file.data <- content(response, as="parsed")
